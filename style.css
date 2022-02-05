@@ -12,7 +12,7 @@ html{
 }
 
 h1{
-    font-family: var(--fuente-titulos);
+    font-family: var(--fuente-texto);
 }
 
 img{
@@ -30,8 +30,7 @@ a{
 /* variables */
 
 :root{
-    --fuente-titulos: 'Fraunces', serif;
-    --fuente-texto: 'Commissioner', sans-serif;
+    --fuente-texto:'Barlow', sans-serif;
 
     /* paleta */
     --crema:  #e0afa0;
@@ -42,14 +41,49 @@ a{
     --negro: #25221f;
 }
 
+/* header */
 
 header{
-    background-color: var(--crema);
-    padding: 1rem;
-    
+    background: rgb(37,34,31);
+    background: linear-gradient(0deg, rgba(37,34,31,1) 0%, rgba(23,18,13,1) 74%);
+    padding: 1rem 1rem 1rem 1rem;
+    overflow: hidden;
+    position: relative;
+}
+
+header div{
+    display: grid;
+    grid-template-rows: auto auto;
 }
 
 header div h1{
-    color: var(--oscuro);
-    font-size: 2.5rem;
+    color: var(--blanco);
+    margin-top: 3rem;
+    font-size: 3rem;
+    text-align: center;
+}
+
+header div p{
+    color: var(--blanco);
+    padding-top: 1.5rem;
+    margin: 0 1rem;
+    text-align: center;
+}
+
+header figure{
+    position: absolute;
+    top: 40%;
+    right: 0;
+}
+
+header figure img{
+    filter: sepia(96%) brightness(67%) hue-rotate(316deg) saturate(68%) opacity(13%) contrast(82%);
+    -webkit-filter: sepia(96%) brightness(67%) hue-rotate(316deg) saturate(68%) opacity(23%) contrast(82%);
+    -moz-filter: sepia(96%) brightness(67%) hue-rotate(316deg) saturate(68%) opacity(13%) contrast(82%);
+}
+
+/* galería 1 */
+
+.galery-section{
+    padding: 1rem;
 }
