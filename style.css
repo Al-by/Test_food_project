@@ -50,7 +50,7 @@ a{
 
 main{
     display: grid;
-    grid-template-columns: repeat(12, auto);
+    grid-template-columns: repeat(10, 10vw);
     grid-template-rows: repeat(5,auto);
 }
 
@@ -74,7 +74,7 @@ header{
     padding: 1rem 1rem 1rem 1rem;
     overflow: hidden;
     position: relative;
-    grid-area: 1/1/2/13;
+    grid-area: 1/1/2/11;
 }
 
 header div{
@@ -112,12 +112,14 @@ header figure img{
 /* galería1 */
 
 .galery-section{
-    grid-area: 2/1/3/13;
+    place-self: center;
+    max-width: 61rem;
+    grid-area: 2/2/3/10;
     display: grid;
     grid-template-columns: repeat(12,auto);
     grid-template-rows: auto auto;
-    gap: 1.5rem;
-    padding: 2rem 1rem;
+    row-gap: 1.5rem;
+    padding: 2rem 0;
 }
 
 .galery-section div{
@@ -129,7 +131,7 @@ header figure img{
 /* menu */
 
 .menu-section{
-    grid-area: 3/1/4/13;
+    grid-area: 3/2/4/10;
     display: grid;
     grid-template-columns: repeat(12,auto);
     grid-template-rows: auto auto;
