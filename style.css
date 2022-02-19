@@ -135,12 +135,44 @@ header figure img{
     display: grid;
     grid-template-columns: repeat(12,auto);
     grid-template-rows: auto auto;
-    gap: 1.5rem;
+    row-gap: 1.5rem;
     padding: 2rem 1rem;
 }
 
 .menu-section .menu-section_container{
     grid-area: 2/2/3/12;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(10rem,32rem));
+
+}
+
+.menu-section .menu-section_container div{
+    position: relative;
+    max-width: 19.8rem;
+    margin: 0 auto;
+    background: linear-gradient(300deg, #e5ccba 42%, var(--crema) 100%);
+    color: var(--oscuro);
+    border-radius: .2rem;
+    box-shadow: 1px 2px 17px -1px var(--gris);
+    padding: .5rem 1rem;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.menu-section .menu-section_container div:hover{
+    box-shadow: 1px 2px 20px 5px var(--gris);
+}
+
+.menu-section .menu-section_container div figure{
+    position: absolute;
+    width: 12rem;
+    top: 0;
+    left: 60%;
+}
+
+.menu-section .menu-section_container div p{
+    font-size: .8rem;
+    width: 70%;
 }
 
 /* catálogo */
