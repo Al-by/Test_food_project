@@ -10,9 +10,9 @@ html{
 
 body{
     background-color: var(--blanco);
-    background-image: linear-gradient(45deg, transparent 20%, black 25%, transparent 25%), 
-    linear-gradient(-45deg, transparent 20%, var(--gris-oscuro) 25%, transparent 25%), 
-    linear-gradient(-45deg, transparent 75%, var(--gris-oscuro) 80%, transparent 0),
+    background-image: linear-gradient(45deg, transparent 20%, var(--gris) 25%, transparent 25%), 
+    linear-gradient(-45deg, transparent 20%, var(--gris) 25%, transparent 25%), 
+    linear-gradient(-45deg, transparent 75%, var(--gris) 80%, transparent 0),
     radial-gradient(var(--gris) 2px, transparent 0);
     background-size: 30px 30px, 30px 30px;
     color: var(--negro);
@@ -22,7 +22,7 @@ body{
 
 
 h2{
-    font-size: 1.1rem;
+    font-size: 1.65rem;
 }
 
 img{
@@ -62,6 +62,13 @@ a{
     padding: .5rem .5rem;
     box-shadow: 1px 2px 17px -1px var(--gris);
     font-size: 2.2rem;
+}
+
+.standart-section{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 1.5rem 0;
 }
 
 
@@ -112,17 +119,38 @@ header figure img{
 
 main{
     display: grid;
-    max-width: 60rem;
+    max-width: 80rem;
     margin: 0 auto;
     padding: 2rem;
     background-color: var(--blanco);
     grid-template-columns: repeat(10,10%);
+    border: solid 1px var(--gris);
+    border-bottom: 0px;
+    border-top: 0px;
+    box-shadow: -1px 2px 39px -16px var(--gris);
 }
 
 /* galería1 */
 
 .galery-section{
+    margin-top: 0;
     grid-area: 1/1/2/11;
+}
+
+.galery-section div{
+    display: grid;
+    margin: .5rem;
+    gap: .5rem;
+    place-items: center;
+}
+
+.galery-section div figure img{
+    border-radius: .5rem;
+    box-shadow: -1px 2px 22px -15px var(--gris);
+}
+
+.galery-section div .galery-section_item1{
+    grid-area: 1/1/5/5;
 }
 
 /* menu */
@@ -131,9 +159,16 @@ main{
     grid-area: 2/1/3/11;
 }
 
+.menu-section .menu-section_container{
+    place-self: center;
+    width: 100%;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(20rem,1fr));
+}
+
 .menu-section .menu-section_container div{
     position: relative;
-    max-width: 19.8rem;
     margin: 0 auto;
     background: linear-gradient(300deg, #e5ccba 42%, var(--crema) 100%);
     color: var(--oscuro);
@@ -150,14 +185,14 @@ main{
 
 .menu-section .menu-section_container div figure{
     position: absolute;
-    width: 12rem;
+    width: 15rem;
     top: 0;
-    left: 60%;
+    left: 65%;
 }
 
 .menu-section .menu-section_container div p{
-    font-size: .8rem;
-    width: 70%;
+    font-size: 1.3rem;
+    width: 65%;
 }
 
 /* catálogo */
@@ -165,6 +200,61 @@ main{
 .scrollmenu{
     grid-area: 3/1/4/11;
 }
+
+
+.scrollmenu ul{
+    display: grid;
+    grid-template-columns: repeat(10,19rem);
+    overflow: scroll;
+    gap: 1rem;
+    padding: 1rem 1rem 2rem 1rem;
+}
+
+.scrollmenu ul li{
+    background-color: var(--blanco);
+    box-shadow: 0 0 20px -6px var(--gris);
+    display: grid;
+    grid-template-rows: repeat(3,auto);
+    gap: 1rem;
+    position: relative;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.scrollmenu ul li:hover{
+    border: 1px solid var(--gris);
+}
+
+.scrollmenu ul li div p{
+    font-size: 1.5rem;
+}
+
+.scrollmenu ul li .heart_button{
+    font-size: 2rem;
+    position: absolute;
+    top: .5rem;
+    right: .5rem;
+    cursor: pointer;
+}
+
+.scrollmenu ul li .button{
+    background: linear-gradient(149deg, var(--crema) 0, #db8484 86%);
+    color: white;
+    place-self: center;
+    font-size: 1.4rem;
+    padding: .6rem 1rem;
+    border-radius: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: .5rem;
+    cursor: pointer;
+}
+
+.scrollmenu ul li .button:hover{
+    background: #db8484;
+    box-shadow: 0 0 20px -6px var(--gris);
+}
+
 
 /* footer */
 
@@ -184,3 +274,4 @@ footer div p{
 footer div span{
     margin: 0 .5rem;
 }
+
