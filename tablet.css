@@ -1,0 +1,12 @@
+.galery-section div{
+    margin: 0 auto;
+    max-width: 49rem;
+}
+.scrollmenu ul{
+    overflow: visible;
+    grid-template-columns: repeat(auto-fill, minmax(19rem,1fr));
+}
+
+.scrollmenu .scrollmenu_menu_container_item10{
+    grid-area: 4/2/5/3;
+}

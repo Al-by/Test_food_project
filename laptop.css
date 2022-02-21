@@ -1,0 +1,60 @@
+header{
+    max-height: 30rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+header div{
+    grid-template-rows: min-content min-content;
+    justify-self: end;
+    max-width: 48rem;
+    place-items: center;
+}
+
+header div h1{
+    font-size:4rem;
+    margin-top: 3.5rem;
+}
+
+header div p{
+    font-size: 1.6rem;
+}
+
+header figure{
+
+    justify-self: start;
+    position: relative;
+    top: 0;
+    padding: 2rem 0rem;
+    max-width: 48rem;
+}
+
+header figure img{
+    filter: sepia(96%) brightness(67%) hue-rotate(316deg) saturate(68%) opacity(50%) contrast(82%);
+}
+
+.galery-section{
+    grid-area: 1/1/2/8;
+    padding-right: 3rem;
+    align-self: center;
+}
+
+.menu-section{
+    grid-area: 1/8/2/11;
+}
+
+
+.scrollmenu{
+    margin-top: 3rem;
+    grid-area: 2/1/3/11;
+}
+
+.scrollmenu ul{
+    overflow: visible;
+    grid-template-columns: repeat(auto-fill, minmax(19rem,1fr));
+}
+
+.scrollmenu .scrollmenu_menu_container_item10{
+    grid-area: 4/2/5/3;
+}

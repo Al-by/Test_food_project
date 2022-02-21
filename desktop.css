@@ -1,0 +1,11 @@
+main{
+    max-width: 90rem;
+}
+
+.scrollmenu .scrollmenu_menu_container_item9{
+    grid-area: 3/2/4/3;
+}
+
+.scrollmenu .scrollmenu_menu_container_item10{
+    grid-area: 3/3/4/4;
+}
